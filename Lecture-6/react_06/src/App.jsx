@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react'
+import Parent from './components/Parent';
 
 function App() {
   return (
     <div>
-      <Counterr />
+      {/* <Counterr /> */}
+      <Parent />
     </div>
   )
 }
