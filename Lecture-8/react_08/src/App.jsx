@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Suspense } from 'react'
 import Reff2 from './components/Reff2'
 import { Link, Route, Routes, useNavigate } from 'react-router-dom'
 // import Dashboard from './components/Dashboard'
@@ -19,8 +19,9 @@ function App() {
   return (
     <div>
       <Routes>
-        <Route path='/dashboard' element={<Dashboard />} />
-        <Route path='/about'     element={<About />    } />
+        {/* <Route path='/dashboard' element={<Dashboard />} /> */}
+        <Route path='/dashboard' element={ <Suspense fallback="loading1..."> <Dashboard /> </Suspense> } />
+        <Route path='/about'     element={ <Suspense fallback="loading2..."> <About />  </Suspense> } />
       </Routes>
       <button onClick={handleDashboard} >VISIT DASHBOARD</button>
       <Link to='/dashboard'>VISIT DASHBOARD</Link>
