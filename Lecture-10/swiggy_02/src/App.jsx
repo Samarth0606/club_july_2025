@@ -1,3 +1,4 @@
+import { Outlet } from "react-router-dom";
 import Apicalling from "./components/Apicalling";
 import Body from "./components/Body";
 import Footer from "./components/Footer";
@@ -7,7 +8,8 @@ function App(){
   return(
     <div>
       <Header />
-      <Body />
+      {/* <Body /> */}
+      <Outlet />
       <Footer />
     </div>
   )
