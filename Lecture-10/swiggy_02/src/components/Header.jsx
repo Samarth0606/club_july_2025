@@ -1,5 +1,6 @@
 import React from 'react'
 import { IoSearchOutline } from "react-icons/io5";
+import { Link } from 'react-router-dom';
 
 function Header() {
   return (
@@ -9,25 +10,24 @@ function Header() {
             <ul className='flex'>
                 <div className='flex m-4'>
                     <span className='mt-1'> <IoSearchOutline /> </span>
-                    <li className='px-2'>SEARCH</li>
+                    <Link> <li className='px-2'>SEARCH</li> </Link>
                 </div>
                 <div className='flex m-4'>
                     <span className='mt-1'> <IoSearchOutline /> </span>
-                    <li className='px-2'>OFFER</li>
+                    <Link to='/offers'> <li className='px-2'>OFFERS</li> </Link>
                 </div>
                 <div className='flex m-4'>
-                    <span className='mt-1'> <IoSearchOutline /> </span>                   
-                    <li className='px-2'>HELP</li>
+                    <span className='mt-1'> <IoSearchOutline /> </span>   
+                    <Link to='/help'> <li className='px-2'>HELP</li> </Link>                
                 </div>
                 <div className='flex m-4'>
                     <span className='mt-1'> <IoSearchOutline /> </span> 
-                    <li className='px-2'>SIGNIN</li>
+                    <Link to='/signin'> <li className='px-2'>SIGNIN</li> </Link>
                 </div>
                 <div className='flex m-4'>
                     <span className='mt-1'> <IoSearchOutline /> </span>
-                    <li className='px-2'>CART</li>
+                    <Link to='/cart'> <li className='px-2'>CART</li> </Link>
                 </div>
-                
             </ul>
         </nav>
     </div>

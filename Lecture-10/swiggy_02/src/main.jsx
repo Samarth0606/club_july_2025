@@ -7,11 +7,13 @@ import Help from './components/Help.jsx'
 import Signin from './components/Signin.jsx'
 import Cart from './components/Cart.jsx'
 import Body from './components/Body.jsx'
+import Error from './components/Error.jsx'
 
 const appRouter = createBrowserRouter([
   {
     path:'/',
     element: <App />, 
+    errorElement: <Error />,
     children:[
       {
         path:'/',
