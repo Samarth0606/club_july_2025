@@ -1,0 +1,25 @@
+Usestate = batching
+
+useEffect() = cleanup fn  Or   lifecycle method
+
+Usememo vs usecallback
+
+Usememo vs memo
+
+Optimisation technique = above all + lazy loading
+
+Suspense , fallback
+
+Prop drilling -> context api -> redux 
+
+Adv. Dis. of react
+
+Virtual dom => reconcillation (algos)
+
+Controlled components
+
+Counter, searchbar , lifecycle example, apicalling 
+
+Fetch('api')  //partial data
+res.json() -> convert json format
+                  -> waits for the entire data to come
