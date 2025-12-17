@@ -1,8 +1,10 @@
 import React from 'react'
 import { IoSearchOutline } from "react-icons/io5";
+import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 function Header() {
+    const cartItems = useSelector((store)=>store.cart.items)
   return (
     <div>
         <nav className='dark:bg-gray-900 text-white flex justify-between px-12 h-20 items-center'>
@@ -26,7 +28,7 @@ function Header() {
                 </div>
                 <div className='flex m-4'>
                     <span className='mt-1'> <IoSearchOutline /> </span>
-                    <Link to='/cart'> <li className='px-2'>CART</li> </Link>
+                    <Link to='/cart'> <li className='px-2'>CART - {cartItems.length}</li> </Link>
                 </div>
             </ul>
         </nav>
