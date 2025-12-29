@@ -10,8 +10,18 @@ mongoose.connect('mongodb+srv://samarthvohraindia_db_user:VKQu6yJL7lapU1U5@clust
 
 app.use(express.json()) //json middleware
 
+// middleware
+app.use('/sam', (req,res,next)=>{
+    console.log("i am middleware hahahhha");
+    next();
+})
+
 app.get('/' , (req,res)=>{
     res.send("Root Route")
+})
+
+app.get('/sam' , (req,res)=>{
+    res.send("Sam Route")
 })
 
 restaurantRoute(app)
