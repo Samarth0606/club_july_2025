@@ -2,6 +2,7 @@ import express from 'express'
 const app = express();
 import mongoose from 'mongoose';
 import restaurantRoute from './routes/restaurant.routes.js'
+import userRoute from './routes/user.routes.js'
 
 mongoose.connect('mongodb+srv://samarthvohraindia_db_user:VKQu6yJL7lapU1U5@cluster0.9uzb7bb.mongodb.net/') //url
 .then(()=>console.log("DB CONNECTED") )
@@ -14,6 +15,7 @@ app.get('/' , (req,res)=>{
 })
 
 restaurantRoute(app)
+userRoute(app)
 
 const PORT = 8080
 app.listen(PORT , ()=>{
