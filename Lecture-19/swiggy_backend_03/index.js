@@ -3,12 +3,14 @@ const app = express();
 import mongoose from 'mongoose';
 import restaurantRoute from './routes/restaurant.routes.js'
 import userRoute from './routes/user.routes.js'
+import cors from 'cors'
 
 mongoose.connect('mongodb+srv://samarthvohraindia_db_user:VKQu6yJL7lapU1U5@cluster0.9uzb7bb.mongodb.net/') //url
 .then(()=>console.log("DB CONNECTED") )
 .catch(()=>console.log("DB NOT CONNECTED") )
 
 app.use(express.json()) //json middleware
+app.use(cors()); //CORS middleware
 
 // middleware
 app.use('/sam', (req,res,next)=>{
